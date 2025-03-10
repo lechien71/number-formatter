@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>数字整形</title>
+  
+  <!-- PWA対応のためのメタタグ -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="数字整形">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f7fa;
+    }
+    .container {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      min-height: 100px;
+      margin-bottom: 15px;
+      font-family: monospace;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+    #format-btn {
+      background-color: #4c6ef5;
+      color: white;
+      flex: 2;
+    }
+    #clear-btn {
+      background-color: #6c757d;
+      color: white;
+      flex: 1;
+    }
+    .copy-btn {
+      background-color: #38b2ac;
+      padding: 5px 10px;
+      font-size: 12px;
+      margin-left: 10px;
+      color: white;
+    }
+    .result-container {
+      margin-top: 20px;
+      background-color: #f1f5f9;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    .number-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .number {
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>数字整形</h1>
+    
+    <div>
+      <textarea 
+        id="input-text" 
+        placeholder="例: 77238-4253-6847 / 77238-4253-6989"></textarea>
+    </div>
+    
+    <div class="button-group">
+      <button id="format-btn">変換</button>
+      <button id="clear-btn">クリア</button>
+    </div>
+    
+    <div id="result-section" style="display: none;">
+      <h2>結果:</h2>
+      <div id="result-container" class="result-container"></div>
+    </div>
+  </div>
+
+  <script>
+    // 要素の取得
+    const inputElement = document.getElementById('input-text');
+    const formatButton = document.getElementById('format-btn');
+    const clearButton = document.getElementById('clear-btn');
+    const resultSection = document.getElementById('result-section');
+    const resultContainer = document.getElementById('result-container');
+    
+    // イベントリスナーの設定
+    formatButton.addEventListener('click', formatNumbers);
+    clearButton.addEventListener('click', clearAll);
+    
+    // 数字整形関数
+    function formatNumbers() {
+      const input = inputElement.value.trim();
+      
+      if (!input) {
+        alert('入力してください');
+        return;
+      }
+      
+      let numbers;
+      
+      if (input.includes('/')) {
+        // 「/」がある場合は、「/」で分割して各部分のハイフンを削除
+        numbers = input.split('/').map(item => item.trim().replace(/-/g, ''));
+      } else {
+        // 「/」がない場合は、ハイフンだけを削除
+        numbers = [input.replace(/-/g, '')];
+      }
+      
+      // 結果の表示
+      resultContainer.innerHTML = '';
+      numbers.forEach((number, index) => {
+        const row = document.createElement('div');
+        row.className = 'number-row';
+        
+        const numberElement = document.createElement('div');
+        numberElement.className = 'number';
+        numberElement.textContent = number;
+        
+        const copyButton = document.createElement('button');
+        copyButton.className = 'copy-btn';
+        copyButton.textContent = 'コピー';
+        copyButton.dataset.number = number;
+        copyButton.addEventListener('click', function() {
+          copyToClipboard(number, this);
+        });
+        
+        row.appendChild(numberElement);
+        row.appendChild(copyButton);
+        resultContainer.appendChild(row);
+      });
+      
+      resultSection.style.display = 'block';
+    }
+    
+    // クリップボードにコピーする関数
+    function copyToClipboard(text, button) {
+      // クリップボードにコピー
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      
+      // ボタンのテキストを一時的に変更
+      const originalText = button.textContent;
+      button.textContent = 'コピー完了!';
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 2000);
+    }
+    
+    // 入力と結果をクリアする関数
+    function clearAll() {
+      // 入力フィールドをクリア
+      inputElement.value = '';
+      
+      // 結果セクションを非表示
+      resultSection.style.display = 'none';
+      
+      // 結果コンテナの内容もクリア
+      resultContainer.innerHTML = '';
+      
+      // 入力フィールドにフォーカス
+      inputElement.focus();
+    }
+  </script>
+</body>
+</html>
